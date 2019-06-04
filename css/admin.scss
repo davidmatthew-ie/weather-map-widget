@@ -1,0 +1,18 @@
+/* Admin-only styles */
+
+.weather-map-widget-admin {
+    label {
+        display: inline-block;
+        margin-bottom: 3px;
+    }
+
+    small {
+        color: #aaa;
+        margin-left: 5px;
+
+        strong {
+            color: #888;
+            text-decoration: underline;
+        }
+    }
+}
