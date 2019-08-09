@@ -1,8 +1,8 @@
 === Weather Map Widget ===
 Contributors: davidmatthew
-Tags: weather, map, widget, shortcode, windy.com, forecast, wind, rain, clouds, sun, temperature, responsive
+Tags: weather, map, widget, shortcode, windy.com, forecast, wind, rain, clouds, sun, temperature, responsive, translation-ready
 Requires at least: 5.0
-Tested up to: 5.2.1
+Tested up to: 5.2.2
 Requires PHP: 7.0
 Stable tag: 1.0.0
 License: GPL-3
@@ -41,15 +41,15 @@ Note that in the case of an invalid value, a default value will be used instead.
 == Frequently Asked Questions ==
 Why not just embed the iframe directly from [windy.com](https://www.windy.com) instead of using this plugin?
 
-If you\'d prefer to do this, that\'s great - no problem! However, this plugin was made to make this great iframe that [windy.com](https://www.windy.com) provides even more useful. To that end, it offers the following advantages:
+If you\'d prefer to do this, that\'s great - no problem! However, this plugin was created to make the iframe that [windy.com](https://www.windy.com) kindly provide even more useful. To that end, it offers the following advantages:
 
+* While an iframe can be inserted directly into a page or post, you can\'t insert an iframe directly into the WordPress widgets area (which is how most themes allow you to set the content for site sidebars and footers etc). This plugin allows you to do precisely that.
 * You can change the default overlay from wind to either temperature, rain, clouds or radar/lightning.
 * Width and height can be set to responsive (percentage-based) as well as fixed (pixel-based) values.
-* While an iframe can be inserted directly into a page or post, you can\'t insert an iframe directly into the WordPress widgets area (which is how most themes allow you to set the content for site sidebars and footers etc). This plugin allows you to do precisely that.
 * And even in the case of an iframe inserted into a page or post, the generated code can often confuse people who don\'t have any technical/programming experience. The shortcode provided by this plugin simplifies this considerably, making it readable and easy to customise by anyone, technical and non-technical alike.
 
 == Screenshots ==
-1. The Weather Map Widget placed in a sidebar, zoomed in over Ireland (where I\'m from!).
+1. The Weather Map Widget placed in a sidebar, zoomed in over Ireland (where I\'m from!). We talk a lot about the weather here. :)
 2. The corresponding view from the admin area (Appearance > Widgets).
 
 == Changelog ==
