@@ -1,6 +1,6 @@
 === Weather Map Widget ===
 Contributors: davidmatthew
-Tags: weather, map, widget, shortcode, windy.com, forecast, wind, rain, clouds, sun, temperature, responsive, translation-ready
+Tags: weather, map, forecast, windy.com, wind, rain, clouds, sun, temperature, widget, shortcode, responsive, translation-ready
 Requires at least: 5.0
 Tested up to: 5.2.2
 Requires PHP: 7.0
