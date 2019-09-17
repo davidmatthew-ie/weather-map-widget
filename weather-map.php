@@ -5,7 +5,7 @@
  * @package           WeatherMap
  * Plugin Name:       Weather Map Widget
  * Description:       Easily embed the windy.com widget as a native WordPress widget. Shortcodes also supported.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            David Matthew
  * Author URI:        https://davidmatthew.ie
  * License:           GPL-3
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Current plugin version, manually defined for performance reasons.
-define( 'WEATHER_MAP_WIDGET_VERSION', '1.0.0' );
+define( 'WEATHER_MAP_WIDGET_VERSION', '1.0.1' );
 
 // Load the core plugin class and create a plugin instance.
 require plugin_dir_path( __FILE__ ) . 'classes/class-weather-map.php';

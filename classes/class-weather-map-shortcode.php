@@ -55,7 +55,7 @@ class Weather_Map_Shortcode {
 				'scale'  => 'C',
 			),
 			$attributes,
-			'windy'
+			'weather-map'
 		);
 
 		// Start the iframe.
@@ -67,20 +67,23 @@ class Weather_Map_Shortcode {
 		// The iframe source URL.
 		$output .= 'src="https://embed.windy.com/embed2.html?';
 
-		// Longitude and Latitude.
+		// Latitude and longitude.
 		$output .= 'lat=' . esc_attr( $atts['lat'] ) . '&lon=' . esc_attr( $atts['lon'] );
 
-		// Zoom Level.
+		// Zoom level.
 		$output .= '&zoom=' . esc_attr( $atts['zoom'] );
 
 		// The weather layer (overlay).
 		$output .= '&overlay=' . esc_attr( $atts['layer'] );
 
+		// Detail latitude and longitude.
+		$output .= '&detailLat=' . esc_attr( $atts['lat'] ) . '&detailLon=' . esc_attr( $atts['lon'] );
+
 		// The temperature scale.
 		$output .= '&metricTemp=°' . esc_attr( strtoupper( $atts['scale'] ) );
 
 		// Complete the iframe.
-		$output .= '&message=true&radarRange=-1" frameborder="0"></iframe>';
+		$output .= '&metricWind=default&level=surface&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&radarRange=-1" frameborder="0"></iframe>';
 
 		// Return the complete output.
 		return $output;

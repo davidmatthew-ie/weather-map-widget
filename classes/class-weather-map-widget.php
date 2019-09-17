@@ -76,20 +76,20 @@ class Weather_Map_Widget extends WP_Widget {
 		// Zoom level.
 		echo ( isset( $instance['zoom'] ) ) ? '&zoom=' . esc_attr( $zoom ) : '&zoom=5';
 
-		// The altitude/level.
-		echo '&level=surface';
-
 		// The weather layer (overlay).
 		echo ( isset( $instance['layer'] ) ) ? '&overlay=' . esc_attr( $layer ) : '&overlay=wind';
 
-		// Continue with set/blank values.
-		echo '&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&metricWind=default';
+		// Detail latitude.
+		echo ( isset( $instance['lat'] ) ) ? '&detailLat=' . esc_attr( $lat ) : '&detailLat=53.199';
+
+		// Detail longitude.
+		echo ( isset( $instance['lon'] ) ) ? '&detailLon=' . esc_attr( $lon ) : '&detailLon=-7.603';
 
 		// The temperature scale.
 		echo ( isset( $instance['scale'] ) ) ? '&metricTemp=°' . esc_attr( $scale ) : '&metricTemp=°C';
 
 		// Complete the iframe.
-		echo '&radarRange=-1" frameborder="0"></iframe>';
+		echo '&metricWind=default&level=surface&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&radarRange=-1" frameborder="0"></iframe>';
 
 		echo $args['after_widget'];
 	}
