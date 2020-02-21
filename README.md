@@ -1,5 +1,7 @@
-# Weather Map Widget
+## Ventus - Weather Map Widget & Shortcode
 
-A WordPress plugin that allows you to easily embed the windy.com widget as a native WordPress widget or shortcode. You can view it on the official WordPress plugin repository [here](https://wordpress.org/plugins/weather-map-widget/).
+A WordPress plugin that allows you to easily customise and embed the windy.com widget as a native WordPress widget or shortcode. It is built using an object-oriented approach, and follows [Wordpress Coding Standards](https://github.com/WordPress/WordPress-Coding-Standards).
 
-This plugin is built using an object-oriented approach, and follows the [Wordpress Coding Standard](https://github.com/WordPress/WordPress-Coding-Standards).
+You can view it on the official WordPress plugin repository [here](https://wordpress.org/plugins/weather-map-widget/).
+
+![Ventus Logo](https://ps.w.org/weather-map-widget/assets/icon.svg?rev=2137405)

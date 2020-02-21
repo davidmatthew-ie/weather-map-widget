@@ -2,15 +2,15 @@
 /**
  * The main plugin file.
  *
- * @package           WeatherMap
- * Plugin Name:       Weather Map Widget
- * Description:       Easily embed the windy.com widget as a native WordPress widget. Shortcodes also supported.
- * Version:           1.0.1
+ * @package           Ventus
+ * Plugin Name:       Ventus - Weather Map Widget & Shortcode
+ * Description:       Easily customise and embed the windy.com widget as a native WordPress widget or shortcode.
+ * Version:           1.1.0
  * Author:            David Matthew
  * Author URI:        https://davidmatthew.ie
  * License:           GPL-3
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:       weather-map
+ * Text Domain:       ventus
  * Domain Path:       /languages
  */
 
@@ -20,8 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Current plugin version, manually defined for performance reasons.
-define( 'WEATHER_MAP_WIDGET_VERSION', '1.0.1' );
+define( 'VENTUS_VERSION', '1.1.0' );
 
 // Load the core plugin class and create a plugin instance.
-require plugin_dir_path( __FILE__ ) . 'classes/class-weather-map.php';
-new Weather_Map();
+require plugin_dir_path( __FILE__ ) . 'classes/class-ventus.php';
+new Ventus();

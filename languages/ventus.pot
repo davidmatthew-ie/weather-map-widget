@@ -1,0 +1,189 @@
+# Ventus - Weather Map Widget & Shortcode
+# Copyright (C) 2020 David Matthew
+msgid ""
+msgstr ""
+"Project-Id-Version: Ventus 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-21 15:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Name of the plugin
+msgid "Ventus - Weather Map Widget & Shortcode"
+msgstr ""
+
+#. Description of the plugin
+msgid "Easily customise and embed the windy.com widget as a native WordPress widget or shortcode."
+msgstr ""
+
+#: classes/class-ventus-widget.php:28
+msgid "Ventus Weather Map"
+msgstr ""
+
+#: classes/class-ventus-widget.php:31
+msgid "A customisable windy.com weather map widget."
+msgstr ""
+
+#: classes/class-ventus-widget.php:115
+msgid "New title"
+msgstr ""
+
+#: classes/class-ventus-widget.php:129
+msgid "Title:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:131
+msgid "Appears above the widget."
+msgstr ""
+
+#: classes/class-ventus-widget.php:134
+msgid "Width:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:136
+msgid "Accepts any valid CSS values for width."
+msgstr ""
+
+#: classes/class-ventus-widget.php:139
+msgid "Height:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:141
+msgid "Accepts any valid CSS values for height."
+msgstr ""
+
+#: classes/class-ventus-widget.php:144
+msgid "Latitude:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:149
+msgid "Longitude:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:154
+msgid "Zoom Level:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:166
+msgid "The lower the number, the further out the zoom."
+msgstr ""
+
+#: classes/class-ventus-widget.php:169
+msgid "Layer Type:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:171
+msgid "Clouds"
+msgstr ""
+
+#: classes/class-ventus-widget.php:172
+msgid "CO Concentration"
+msgstr ""
+
+#: classes/class-ventus-widget.php:173
+msgid "Lightning"
+msgstr ""
+
+#: classes/class-ventus-widget.php:174
+msgid "Rain"
+msgstr ""
+
+#: classes/class-ventus-widget.php:175
+msgid "Sea Temperature"
+msgstr ""
+
+#: classes/class-ventus-widget.php:176
+msgid "Snow Cover"
+msgstr ""
+
+#: classes/class-ventus-widget.php:177
+msgid "Temperature"
+msgstr ""
+
+#: classes/class-ventus-widget.php:178
+msgid "Waves"
+msgstr ""
+
+#: classes/class-ventus-widget.php:179
+msgid "Wind"
+msgstr ""
+
+#: classes/class-ventus-widget.php:181
+msgid "Choose from different primary overlays/layers."
+msgstr ""
+
+#: classes/class-ventus-widget.php:184
+msgid "Marker:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:186 classes/class-ventus-widget.php:194
+msgid "Show"
+msgstr ""
+
+#: classes/class-ventus-widget.php:187 classes/class-ventus-widget.php:195
+msgid "Hide"
+msgstr ""
+
+#: classes/class-ventus-widget.php:189
+msgid "Show or hide the marker."
+msgstr ""
+
+#: classes/class-ventus-widget.php:192
+msgid "Pressure Isolines:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:197
+msgid "Show or hide pressure isolines."
+msgstr ""
+
+#: classes/class-ventus-widget.php:200
+msgid "Temperature Scale:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:202
+msgid "Celsius"
+msgstr ""
+
+#: classes/class-ventus-widget.php:203
+msgid "Fahrenheit"
+msgstr ""
+
+#: classes/class-ventus-widget.php:205
+msgid "Choose your preferred temperature scale."
+msgstr ""
+
+#: classes/class-ventus-widget.php:208
+msgid "Wind Units:"
+msgstr ""
+
+#: classes/class-ventus-widget.php:210
+msgid "Default"
+msgstr ""
+
+#: classes/class-ventus-widget.php:211
+msgid "Beaufort"
+msgstr ""
+
+#: classes/class-ventus-widget.php:212
+msgid "Kilometers per hour"
+msgstr ""
+
+#: classes/class-ventus-widget.php:213
+msgid "Knots"
+msgstr ""
+
+#: classes/class-ventus-widget.php:214
+msgid "Meters per second"
+msgstr ""
+
+#: classes/class-ventus-widget.php:215
+msgid "Miles per hour"
+msgstr ""
+
+#: classes/class-ventus-widget.php:217
+msgid "Choose your preferred wind measurement units."
+msgstr ""

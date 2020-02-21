@@ -2,8 +2,8 @@
 /**
  * The file containing the shortcode.
  *
- * @package    WeatherMap
- * @subpackage WeatherMap/classes
+ * @package    Ventus
+ * @subpackage Ventus/classes
  */
 
 // Exit if accessed directly.
@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * The shortcode class.
  *
- * @package    WeatherMap
- * @subpackage WeatherMap/classes
+ * @package    Ventus
+ * @subpackage Ventus/classes
  */
-class Weather_Map_Shortcode {
+class Ventus_Shortcode {
 
 	/**
 	 * The class constructor.
@@ -30,7 +30,8 @@ class Weather_Map_Shortcode {
 	 * Add the shortcode.
 	 */
 	public function add_the_shortcode() {
-		add_shortcode( 'weather-map', array( $this, 'create_the_shortcode' ) );
+		add_shortcode( 'weather-map', array( $this, 'create_the_shortcode' ) ); // maintained for backward-compatibility
+		add_shortcode( 'ventus', array( $this, 'create_the_shortcode' ) );
 	}
 
 	/**
@@ -46,16 +47,18 @@ class Weather_Map_Shortcode {
 		// Initialize the attributes and their default values.
 		$atts = shortcode_atts(
 			array(
-				'width'  => '100%',
-				'height' => '350px',
-				'lat'    => '53.199',
-				'lon'    => '-7.603',
-				'zoom'   => '5',
-				'layer'  => 'wind',
-				'scale'  => 'C',
+				'width'    => '100%',
+				'height'   => '350px',
+				'lat'      => '53.199',
+				'lon'      => '-7.603',
+				'zoom'     => '5',
+				'layer'    => 'wind',
+				'scale'    => 'C',
+				'units'    => 'default',
+				'marker'   => '',
+				'pressure' => ''
 			),
-			$attributes,
-			'weather-map'
+			$attributes
 		);
 
 		// Start the iframe.
@@ -76,14 +79,23 @@ class Weather_Map_Shortcode {
 		// The weather layer (overlay).
 		$output .= '&overlay=' . esc_attr( $atts['layer'] );
 
+		// Show or hide the marker.
+		$output .= '&marker=' . esc_attr( $atts['marker'] );
+
+		// Show or hide pressure isolines.
+		$output .= '&pressure=' . esc_attr( $atts['pressure'] );
+
 		// Detail latitude and longitude.
 		$output .= '&detailLat=' . esc_attr( $atts['lat'] ) . '&detailLon=' . esc_attr( $atts['lon'] );
+
+		// The wind measurement units.
+		$output .= '&metricWind=' . esc_attr( $atts['units'] );
 
 		// The temperature scale.
 		$output .= '&metricTemp=°' . esc_attr( strtoupper( $atts['scale'] ) );
 
 		// Complete the iframe.
-		$output .= '&metricWind=default&level=surface&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&radarRange=-1" frameborder="0"></iframe>';
+		$output .= '&level=surface&menu=&message=true&calendar=&type=map&location=coordinates&detail=&radarRange=-1" frameborder="0"></iframe>';
 
 		// Return the complete output.
 		return $output;
