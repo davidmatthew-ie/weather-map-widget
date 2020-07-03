@@ -71,6 +71,7 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 
 = 1.2.0 =
 * Added Spot Forecast feature.
+* Added Brazilian Portuguese translation.
 
 = 1.1.0 =
 * Re-named plugin from 'Weather Map Widget' to 'Ventus - Weather Map Widget & Shortcode'.
