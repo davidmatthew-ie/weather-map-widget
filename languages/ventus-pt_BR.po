@@ -1,32 +1,33 @@
-# Ventus - Weather Map Widget & Shortcode
 # Copyright (C) 2020 David Matthew
+# This file is distributed under the GPL-3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Ventus 1.1.0\n"
+"Project-Id-Version: Ventus - Weather Map Widget & Shortcode 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/weather-map-"
 "widget\n"
-"POT-Creation-Date: 2020-07-03T08:21:41+00:00\n"
-"PO-Revision-Date: 2020-07-03 15:32+0100\n"
-"Last-Translator: \n"
 "Language-Team: \n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-07-03T08:21:41+00:00\n"
+"PO-Revision-Date: 2020-07-03 19:49+0100\n"
 "X-Generator: Poedit 2.3\n"
+"X-Domain: ventus\n"
+"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
 
 #. Plugin Name of the plugin
 msgid "Ventus - Weather Map Widget & Shortcode"
-msgstr "Ventus - Widget Carte Météo & Shortcode"
+msgstr "Ventus - Mapa Meteorológico Widget e Shortcode"
 
 #. Description of the plugin
 msgid ""
 "Easily customise and embed the windy.com widget as a native WordPress widget "
 "or shortcode."
 msgstr ""
-"Personnalisez et intégrez facilement le widget windy.com en tant que widget "
-"WordPress natif ou shortcode."
+"Facil de incorporar e personalizar o widget windy.com como um widget nativo "
+"do WordPress ou shortcode."
 
 #. Author of the plugin
 msgid "David Matthew"
@@ -38,39 +39,39 @@ msgstr "https://davidmatthew.ie"
 
 #: classes/class-ventus-widget.php:28
 msgid "Ventus Weather Map"
-msgstr "Carte Météo Ventus"
+msgstr "Ventus Mapa Meteorológico"
 
 #: classes/class-ventus-widget.php:31
 msgid "A customisable windy.com weather map widget."
-msgstr "Un widget de carte météo windy.com personnalisable."
+msgstr "Um widget personalizável do mapa meteorológico do windy.com."
 
 #: classes/class-ventus-widget.php:119
 msgid "New title"
-msgstr "Nouveau titre"
+msgstr "Novo título"
 
 #: classes/class-ventus-widget.php:134
 msgid "Title:"
-msgstr "Titre:"
+msgstr "Título:"
 
 #: classes/class-ventus-widget.php:136
 msgid "Appears above the widget."
-msgstr "Apparaît au-dessus du widget."
+msgstr "Aparece acima do widget."
 
 #: classes/class-ventus-widget.php:139
 msgid "Width:"
-msgstr "Largeur:"
+msgstr "Largura:"
 
 #: classes/class-ventus-widget.php:141
 msgid "Accepts any valid CSS values for width."
-msgstr "Accepte toutes les valeurs CSS valides pour la largeur."
+msgstr "Aceita quaisquer CSS válidos para largura."
 
 #: classes/class-ventus-widget.php:144
 msgid "Height:"
-msgstr "Hauteur:"
+msgstr "Altura:"
 
 #: classes/class-ventus-widget.php:146
 msgid "Accepts any valid CSS values for height."
-msgstr "Accepte toutes les valeurs CSS valides pour la hauteur."
+msgstr "Aceita quaisquer CSS válidos para altura."
 
 #: classes/class-ventus-widget.php:149
 msgid "Latitude:"
@@ -82,85 +83,85 @@ msgstr "Longitude:"
 
 #: classes/class-ventus-widget.php:159
 msgid "Zoom Level:"
-msgstr "Le Niveau de Zoom:"
+msgstr "Nível de Zoom:"
 
 #: classes/class-ventus-widget.php:171
 msgid "The lower the number, the further out the zoom."
-msgstr "Plus le nombre est bas, plus le zoom est éloigné."
+msgstr "Quanto mais baixo o numero, mais distante o zoom."
 
 #: classes/class-ventus-widget.php:174
 msgid "Layer Type:"
-msgstr "Type de Carte:"
+msgstr "Tipo de Camada:"
 
 #: classes/class-ventus-widget.php:176
 msgid "Clouds"
-msgstr "Nuages"
+msgstr "Nuvens"
 
 #: classes/class-ventus-widget.php:177
 msgid "CO Concentration"
-msgstr "Concentration CO"
+msgstr "Concentração de CO"
 
 #: classes/class-ventus-widget.php:178
 msgid "Lightning"
-msgstr "Foudre"
+msgstr "Relâmpago"
 
 #: classes/class-ventus-widget.php:179
 msgid "Rain"
-msgstr "Pluie"
+msgstr "Chuva"
 
 #: classes/class-ventus-widget.php:180
 msgid "Sea Temperature"
-msgstr "Température de la Mer"
+msgstr "Temperatura do Mar"
 
 #: classes/class-ventus-widget.php:181
 msgid "Snow Cover"
-msgstr "Neige"
+msgstr "Cobertura de Neve"
 
 #: classes/class-ventus-widget.php:182
 msgid "Temperature"
-msgstr "Température"
+msgstr "Temperatura"
 
 #: classes/class-ventus-widget.php:183
 msgid "Waves"
-msgstr "Vagues"
+msgstr "Ondas"
 
 #: classes/class-ventus-widget.php:184
 msgid "Wind"
-msgstr "Vent"
+msgstr "Vento"
 
 #: classes/class-ventus-widget.php:186
 msgid "Choose from different primary overlays/layers."
-msgstr "Sélectionnez le type de carte."
+msgstr "Escolha entre diferentes camadas."
 
 #: classes/class-ventus-widget.php:189
 msgid "Marker:"
-msgstr "Marqueur:"
+msgstr "Marcador:"
 
 #: classes/class-ventus-widget.php:191 classes/class-ventus-widget.php:199
 #: classes/class-ventus-widget.php:227
 msgid "Show"
-msgstr "Afficher"
+msgstr "Mostrar"
 
 #: classes/class-ventus-widget.php:192 classes/class-ventus-widget.php:200
 #: classes/class-ventus-widget.php:228
 msgid "Hide"
-msgstr "Cache"
+msgstr "Ocultar"
 
 #: classes/class-ventus-widget.php:194
 msgid "Show or hide the marker."
-msgstr "Afficher ou ne pas afficher le marqueur."
+msgstr "Mostrar ou ocultar o marcador."
 
 #: classes/class-ventus-widget.php:197
 msgid "Pressure Isolines:"
-msgstr "Isolignes de Pression:"
+msgstr "Isolinhas:"
 
 #: classes/class-ventus-widget.php:202
 msgid "Show or hide pressure isolines."
-msgstr "Afficher ou ne pas afficher les isolignes de pression."
+msgstr "Mostrar ou ocultar as isolinhas."
 
 #: classes/class-ventus-widget.php:205
 msgid "Temperature Scale:"
-msgstr "Échelle de Temperature:"
+msgstr "Escala de Temperatura:"
 
 #: classes/class-ventus-widget.php:207
 msgid "Celsius"
@@ -172,15 +173,15 @@ msgstr "Fahrenheit"
 
 #: classes/class-ventus-widget.php:210
 msgid "Choose your preferred temperature scale."
-msgstr "Sélectionnez l'échelle de temperature."
+msgstr "Escolha sua escala de temperatura preferida."
 
 #: classes/class-ventus-widget.php:213
 msgid "Wind Units:"
-msgstr "Mesure du Vent:"
+msgstr "Unidades de Vento:"
 
 #: classes/class-ventus-widget.php:215
 msgid "Default"
-msgstr "Défaut"
+msgstr "Padrão"
 
 #: classes/class-ventus-widget.php:216
 msgid "Beaufort"
@@ -188,28 +189,28 @@ msgstr "Beaufort"
 
 #: classes/class-ventus-widget.php:217
 msgid "Kilometers per hour"
-msgstr "Kilomètres par heure"
+msgstr "Quilometros por hora"
 
 #: classes/class-ventus-widget.php:218
 msgid "Knots"
-msgstr "Knots"
+msgstr "Nós"
 
 #: classes/class-ventus-widget.php:219
 msgid "Meters per second"
-msgstr "Mètres par seconde"
+msgstr "Metros por segundo"
 
 #: classes/class-ventus-widget.php:220
 msgid "Miles per hour"
-msgstr "Miles par heure"
+msgstr "Milhas por hora"
 
 #: classes/class-ventus-widget.php:222
 msgid "Choose your preferred wind measurement units."
-msgstr "Sélectionnez la mesure du vent."
+msgstr "Escolha suas unidades de medida de vento preferidas."
 
 #: classes/class-ventus-widget.php:225
 msgid "Spot Forecast:"
-msgstr "Les Prévisions:"
+msgstr "Previsão:"
 
 #: classes/class-ventus-widget.php:230
 msgid "Show or hide the Spot Forecast."
-msgstr "Afficher ou ne pas afficher les prévisions."
+msgstr "Mostrar ou ocultar a previsão."

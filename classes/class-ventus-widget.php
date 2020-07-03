@@ -51,6 +51,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$marker   = ( isset( $instance['marker'] ) ) ? $instance['marker'] : '';
 		$pressure = ( isset( $instance['pressure'] ) ) ? $instance['pressure'] : '';
 		$units    = ( isset( $instance['units'] ) ) ? $instance['units'] : '';
+		$forecast = ( isset( $instance['forecast'] ) ) ? $instance['forecast'] : '';
 
 		echo $args['before_widget'];
 
@@ -100,9 +101,12 @@ class Weather_Map_Widget extends WP_Widget {
 		// The temperature scale.
 		echo ( isset( $instance['scale'] ) ) ? '&metricTemp=°' . esc_attr( $scale ) : '&metricTemp=°C';
 
-		// Complete the iframe.
-		echo '&level=surface&menu=&message=true&calendar=&type=map&location=coordinates&detail=&radarRange=-1" frameborder="0"></iframe>';
+		// The spot forecast.
+		echo ( isset( $instance['forecast'] ) ) ? '&detail=' . esc_attr( $forecast ) : '';
 
+		// Complete the iframe.
+		echo '&calendar=now&product=ecmwf&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
+		
 		echo $args['after_widget'];
 	}
 
@@ -123,6 +127,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$pressure = ( isset( $instance['pressure'] ) ) ? $instance['pressure'] : '';
 		$scale    = ( isset( $instance['scale'] ) ) ? $instance['scale'] : 'C';
 		$units    = ( isset( $instance['units'] ) ) ? $instance['units'] : 'default';
+		$forecast = ( isset( $instance['forecast'] ) ) ? $instance['forecast'] : '';
 		?>
 		<div class="ventus-widget-admin">
 			<p>
@@ -216,6 +221,14 @@ class Weather_Map_Widget extends WP_Widget {
 				</select>
 				<small><?php esc_html_e( 'Choose your preferred wind measurement units.', 'ventus' ); ?></small>
 			</p>
+			<p>
+				<label for="<?php echo esc_attr( $this->get_field_id( 'forecast' ) ); ?>"><?php esc_html_e( 'Spot Forecast:', 'ventus' ); ?></label>
+				<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'forecast' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'forecast' ) ); ?>">
+					<option value="true" <?php echo ( 'true' === $forecast ) ? 'selected' : ''; ?>><?php esc_html_e( 'Show', 'ventus' ); ?></option>
+					<option value="" <?php echo ( '' === $forecast ) ? 'selected' : ''; ?>><?php esc_html_e( 'Hide', 'ventus' ); ?></option>
+				</select>
+				<small><?php esc_html_e( 'Show or hide the Spot Forecast.', 'ventus' ); ?></small>
+			</p>
 		</div>
 		<?php
 	}
@@ -241,6 +254,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$instance['marker']   = ( isset( $new_instance['marker'] ) ) ? sanitize_text_field( $new_instance['marker'] ) : '';
 		$instance['pressure'] = ( isset( $new_instance['pressure'] ) ) ? sanitize_text_field( $new_instance['pressure'] ) : '';
 		$instance['units']    = ( isset( $new_instance['units'] ) ) ? sanitize_text_field( $new_instance['units'] ) : '';
+		$instance['forecast'] = ( isset( $new_instance['forecast'] ) ) ? sanitize_text_field( $new_instance['forecast'] ) : '';
 
 		return $instance;
 	}

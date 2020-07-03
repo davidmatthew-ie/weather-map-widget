@@ -56,7 +56,8 @@ class Ventus_Shortcode {
 				'scale'    => 'C',
 				'units'    => 'default',
 				'marker'   => '',
-				'pressure' => ''
+				'pressure' => '',
+				'forecast' => ''
 			),
 			$attributes
 		);
@@ -94,8 +95,11 @@ class Ventus_Shortcode {
 		// The temperature scale.
 		$output .= '&metricTemp=°' . esc_attr( strtoupper( $atts['scale'] ) );
 
+		// The spot forecast.
+		$output .= '&detail=' . esc_attr( $atts['forecast'] );
+
 		// Complete the iframe.
-		$output .= '&level=surface&menu=&message=true&calendar=&type=map&location=coordinates&detail=&radarRange=-1" frameborder="0"></iframe>';
+		$output .= '&calendar=now&product=ecmwf&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
 
 		// Return the complete output.
 		return $output;

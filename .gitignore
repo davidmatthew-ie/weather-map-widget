@@ -1,2 +1,2 @@
-# Ignore sass caches
 .sass-cache
+.DS_Store

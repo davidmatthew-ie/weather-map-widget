@@ -2,9 +2,9 @@
 Contributors: davidmatthew
 Tags: weather map, weather forecast, windy, weather, map, forecast, ventus
 Requires at least: 5.0
-Tested up to: 5.3.2
+Tested up to: 5.4.2
 Requires PHP: 7.0
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL-3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -21,15 +21,15 @@ It is a lightweight plugin built using an object-oriented approach, and follows 
 * Set the width and height using responsive (%) and/or fixed (px) values.
 * Manually define longitude and latitude for precise location coordinates.
 * Choose from 8 levels of zoom (min. 3, max. 11).
-* Show or hide pressure isolines and the map marker.
+* Show or hide pressure isolines, the map marker and spot forecast.
 * Choose from the following wind measurement units: beaufort (bft), kilometers per hour (km/h), knots (kt), meters per second (m/s) and miles per hour (mph).
 
 = Shortcodes =
-The shortcode accepts up to 10 attributes. You can simply use `[ventus]` and it will work (or the old shortcode `[weather-map]` which will continue to work), but you will most likely want to customise the remaining attributes yourself.
+The shortcode accepts up to 11 attributes. You can simply use `[ventus]` and it will work (or the old shortcode `[weather-map]` which will continue to work), but you will most likely want to customise the remaining attributes yourself.
 
 An example of a fully filled-out shortcode would be:
 
-`[ventus width="100%" height="350px" lat="53.199" lon="-7.603" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true"]`. 
+`[ventus width="100%" height="350px" lat="53.199" lon="-7.603" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true" forecast="true"]`. 
 
 The attributes can be set as follows:
 * The `width` attribute accepts any valid CSS property for width.
@@ -42,6 +42,7 @@ The attributes can be set as follows:
 * The `units` attribute accepts the following values: bft (beaufort), km/h (kilometers per hour), kt (knots), m/s (meters per second) and mph (miles per hour).
 * The `pressure` attribute can be set to true to display pressure isolines, otherwise the isolines will remain hidden.
 * The `marker` attribute can also be set to true, otherwise it will remain hidden.
+* The `forecast` attribute can be set to true to display the spot forecast, otherwise it will remain hidden.
 
 Note that in the case of an invalid value, a default value will be used instead.
 
@@ -67,6 +68,10 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 5. The widget view from the admin area (Appearance > Widgets).
 
 == Changelog ==
+
+= 1.2.0 =
+* Added Spot Forecast feature.
+
 = 1.1.0 =
 * Re-named plugin from 'Weather Map Widget' to 'Ventus - Weather Map Widget & Shortcode'.
 * Added new shortcode alias `[ventus]` (the old shortcode `[weather-map]` has been maintained for backwards-compatibility).

@@ -5,7 +5,7 @@
  * @package           Ventus
  * Plugin Name:       Ventus - Weather Map Widget & Shortcode
  * Description:       Easily customise and embed the windy.com widget as a native WordPress widget or shortcode.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Author:            David Matthew
  * Author URI:        https://davidmatthew.ie
  * License:           GPL-3
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Current plugin version, manually defined for performance reasons.
-define( 'VENTUS_VERSION', '1.1.0' );
+define( 'VENTUS_VERSION', '1.2.0' );
 
 // Load the core plugin class and create a plugin instance.
 require plugin_dir_path( __FILE__ ) . 'classes/class-ventus.php';
