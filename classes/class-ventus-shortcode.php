@@ -49,6 +49,7 @@ class Ventus_Shortcode {
 			array(
 				'width'    => '100%',
 				'height'   => '350px',
+				'radius'   => '0',
 				'lat'      => '53.199',
 				'lon'      => '-7.603',
 				'zoom'     => '5',
@@ -57,7 +58,8 @@ class Ventus_Shortcode {
 				'units'    => 'default',
 				'marker'   => '',
 				'pressure' => '',
-				'forecast' => ''
+				'forecast' => '',
+				'time'     => 'now'
 			),
 			$attributes
 		);
@@ -66,7 +68,7 @@ class Ventus_Shortcode {
 		$output .= '<iframe ';
 
 		// Style the iframe.
-		$output .= 'style="width: ' . esc_attr( $atts['width'] ) . '; height: ' . esc_attr( $atts['height'] ) . '" ';
+		$output .= 'style="width: ' . esc_attr( $atts['width'] ) . '; height: ' . esc_attr( $atts['height'] ) . '; border-radius: ' . esc_attr( $atts['radius'] ) . '" ';
 
 		// The iframe source URL.
 		$output .= 'src="https://embed.windy.com/embed2.html?';
@@ -98,8 +100,11 @@ class Ventus_Shortcode {
 		// The spot forecast.
 		$output .= '&detail=' . esc_attr( $atts['forecast'] );
 
+		// The forecast time.
+		$output .= '&calendar=' . esc_attr( $atts['time'] );
+
 		// Complete the iframe.
-		$output .= '&calendar=now&product=ecmwf&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
+		$output .= '&product=ecmwf&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
 
 		// Return the complete output.
 		return $output;

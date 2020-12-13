@@ -2,9 +2,9 @@
 Contributors: davidmatthew
 Tags: weather map, weather forecast, windy, weather, map, forecast, ventus
 Requires at least: 5.0
-Tested up to: 5.4.2
+Tested up to: 5.6
 Requires PHP: 7.0
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPL-3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -18,22 +18,24 @@ It is a lightweight plugin built using an object-oriented approach, and follows 
 = Features =
 * Set the overlay to either clouds, CO concentration, radar/lightning, rain, sea temperature, snow cover, standard temperature, waves, or wind.
 * Use either Celsius or Fahrenheit as the temperature scale.
-* Set the width and height using responsive (%) and/or fixed (px) values.
+* Set the width, height and border-radius using responsive (%) and/or fixed (px) values.
 * Manually define longitude and latitude for precise location coordinates.
 * Choose from 8 levels of zoom (min. 3, max. 11).
 * Show or hide pressure isolines, the map marker and spot forecast.
 * Choose from the following wind measurement units: beaufort (bft), kilometers per hour (km/h), knots (kt), meters per second (m/s) and miles per hour (mph).
 
 = Shortcodes =
-The shortcode accepts up to 11 attributes. You can simply use `[ventus]` and it will work (or the old shortcode `[weather-map]` which will continue to work), but you will most likely want to customise the remaining attributes yourself.
+The shortcode accepts up to 13 attributes. You can simply use `[ventus]` and it will work (or the old shortcode `[weather-map]` which will continue to work), but you will most likely want to customise the remaining attributes yourself.
 
 An example of a fully filled-out shortcode would be:
 
-`[ventus width="100%" height="350px" lat="53.199" lon="-7.603" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true" forecast="true"]`. 
+`[ventus width="100%" height="350px" radius="20px" lat="53.199" lon="-7.603" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true" forecast="true" time="12"]`. 
 
 The attributes can be set as follows:
+
 * The `width` attribute accepts any valid CSS property for width.
 * The `height` attribute accepts any valid CSS property for height.
+* The `radius` attribute accepts any valid CSS property for border-radius.
 * The `lat` attribute must contain a string of digits to three decimal places, in the range of -90 to +90 (e.g. "53.199"). 
 * The `lon` attribute must also contain a string of digits to three decimal places, in the range of -180 to +180 (e.g. "-120.894"). 
 * The `zoom` attribute must contain a number between 3 and 11 (inclusive).
@@ -43,6 +45,7 @@ The attributes can be set as follows:
 * The `pressure` attribute can be set to true to display pressure isolines, otherwise the isolines will remain hidden.
 * The `marker` attribute can also be set to true, otherwise it will remain hidden.
 * The `forecast` attribute can be set to true to display the spot forecast, otherwise it will remain hidden.
+* The `time` attribute accepts the following values: now (the default), 12 (12 hours from now) and 24 (24 hours from now).
 
 Note that in the case of an invalid value, a default value will be used instead.
 
@@ -51,6 +54,10 @@ Note that in the case of an invalid value, a default value will be used instead.
 2. If you manually download the plugin, just unzip to the WordPress plugins folder and the plugin will be automatically detected. It can then be activated as normal.
 
 == Frequently Asked Questions ==
+= How do I set the latitude and longitude?
+
+The easiest (and recommended) way to do this is to go straight to [windy.com](https://www.windy.com). Once there, take note of the URL. It will contain the latitude and longitude in its parameters, and if you zoom in, it will also contain the zoom level. For example, the sample parameters I use as defaults are: latitude 53.199, longitude -7.603, and a zoom level of 5. These would show in the URL in the following format: [windy.com/?53.199,-7.603,5](https://www.windy.com).
+
 = Why not just embed the iframe directly from [windy.com](https://www.windy.com) instead of using this plugin? =
 
 If you'd prefer to do this, that's great - no problem! However, this plugin was created to make the iframe that [windy.com](https://www.windy.com) kindly provide even more useful. To that end, it offers the following advantages:
@@ -68,6 +75,14 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 5. The widget view from the admin area (Appearance > Widgets).
 
 == Changelog ==
+
+= 1.3.0 =
+* Added feature to define border-radius (rounded corners).
+* Added feature for the spot forecast time (from now, 12 hours from now, or 24 hours from now).
+* Updated widget UI to use less space.
+* Updated the FAQ section.
+* Updated existing translations.
+* Added Turkish translation (thanks for tansi for the assistance!).
 
 = 1.2.0 =
 * Added Spot Forecast feature.
