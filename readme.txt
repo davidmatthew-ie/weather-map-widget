@@ -4,7 +4,7 @@ Tags: weather map, weather forecast, windy, weather, map, forecast, ventus
 Requires at least: 5.0
 Tested up to: 5.6
 Requires PHP: 7.0
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GPL-3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -29,13 +29,14 @@ The shortcode accepts up to 13 attributes. You can simply use `[ventus]` and it 
 
 An example of a fully filled-out shortcode would be:
 
-`[ventus width="100%" height="350px" radius="20px" lat="53.199" lon="-7.603" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true" forecast="true" time="12"]`. 
+`[ventus width="100%" height="350px" radius="20px" loading="lazy" lat="53.199" lon="-7.603" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true" forecast="true" time="12"]`. 
 
 The attributes can be set as follows:
 
 * The `width` attribute accepts any valid CSS property for width.
 * The `height` attribute accepts any valid CSS property for height.
 * The `radius` attribute accepts any valid CSS property for border-radius.
+* The `loading` attribute accepts either lazy or eager. The default is lazy loading.
 * The `lat` attribute must contain a string of digits to three decimal places, in the range of -90 to +90 (e.g. "53.199"). 
 * The `lon` attribute must also contain a string of digits to three decimal places, in the range of -180 to +180 (e.g. "-120.894"). 
 * The `zoom` attribute must contain a number between 3 and 11 (inclusive).
@@ -54,6 +55,14 @@ Note that in the case of an invalid value, a default value will be used instead.
 2. If you manually download the plugin, just unzip to the WordPress plugins folder and the plugin will be automatically detected. It can then be activated as normal.
 
 == Frequently Asked Questions ==
+= Why is the map showing the wrong location? =
+This can happen sometimes with the shortcode if you wrap the longitude or latitude attributes in the wrong kind of quote marks.
+
+Mark sure you are using `" "` rather than `” ”`, e.g.
+
+Correct: `lat="44.096"`
+Incorrect: `lat=”44.096”`
+
 = How do I set the latitude and longitude?
 
 The easiest (and recommended) way to do this is to go straight to [windy.com](https://www.windy.com). Once there, take note of the URL. It will contain the latitude and longitude in its parameters, and if you zoom in, it will also contain the zoom level. For example, the sample parameters I use as defaults are: latitude 53.199, longitude -7.603, and a zoom level of 5. These would show in the URL in the following format: [windy.com/?53.199,-7.603,5](https://www.windy.com).
@@ -75,6 +84,12 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 5. The widget view from the admin area (Appearance > Widgets).
 
 == Changelog ==
+
+= 1.4.0 =
+* Added lazy loading option for better performance.
+* Improved accessibility with unique title attribute.
+* Updated FAQs and tested with WordPress version 6.1.
+* Removed unnecessary scss dependency.
 
 = 1.3.0 =
 * Added feature to define border-radius (rounded corners).

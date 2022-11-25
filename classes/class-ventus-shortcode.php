@@ -59,16 +59,26 @@ class Ventus_Shortcode {
 				'marker'   => '',
 				'pressure' => '',
 				'forecast' => '',
-				'time'     => 'now'
+				'time'     => 'now',
+				'loading'  => 'lazy'
 			),
 			$attributes
 		);
 
 		// Start the iframe.
 		$output .= '<iframe ';
+		
+		// Create a unique title attribute.
+		$output .= 'title="Ventus Weather Map Shortcode ' . esc_attr( $atts['lat'] ) . ' ' . esc_attr( $atts['lon'] ) . '" ';
 
-		// Style the iframe.
-		$output .= 'style="width: ' . esc_attr( $atts['width'] ) . '; height: ' . esc_attr( $atts['height'] ) . '; border-radius: ' . esc_attr( $atts['radius'] ) . '" ';
+		// The lazy-loading property.
+		$output .= 'loading="' . esc_attr( $atts['loading'] ) . '" ';
+
+		// Set the iframe width and height.
+		$output .= 'style="width: ' . esc_attr( $atts['width'] ) . '; height: ' . esc_attr( $atts['height'] ) . '; ';
+
+		// Set the border radius and box-sizing.
+		$output .= 'border-radius: ' . esc_attr( $atts['radius'] ) . '; box-sizing: border-box;" ';
 
 		// The iframe source URL.
 		$output .= 'src="https://embed.windy.com/embed2.html?';
