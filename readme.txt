@@ -88,7 +88,7 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 = 1.4.0 =
 * Added lazy loading option for better performance.
 * Improved accessibility with unique title attribute.
-* Updated FAQs and tested with WordPress version 6.1.
+* Updated FAQs and tested with latest WordPress version.
 * Removed unnecessary scss dependency.
 
 = 1.3.0 =

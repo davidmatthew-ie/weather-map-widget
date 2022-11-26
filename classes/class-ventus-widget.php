@@ -40,7 +40,7 @@ class Weather_Map_Widget extends WP_Widget {
 	 * @param array $instance Saved values from the database.
 	 */
 	public function widget( $args, $instance ) {
-		$title    = ( isset( $instance['title'] ) ) ? apply_filters( 'widget_title', $instance['title'] ) : '';
+		$title    = isset( $instance['title'] ) ? apply_filters( 'widget_title', $instance['title'] ) : '';
 		$width    = ( isset( $instance['width'] ) ) ? $instance['width'] : '';
 		$height   = ( isset( $instance['height'] ) ) ? $instance['height'] : '';
 		$radius   = ( isset( $instance['radius'] ) ) ? $instance['radius'] : '';
@@ -54,6 +54,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$units    = ( isset( $instance['units'] ) ) ? $instance['units'] : '';
 		$forecast = ( isset( $instance['forecast'] ) ) ? $instance['forecast'] : '';
 		$time     = ( isset( $instance['time'] ) ) ? $instance['time'] : '';
+		$loading  = ( isset( $instance['loading'] ) ) ? $instance['loading'] : '';
 
 		echo $args['before_widget'];
 
@@ -61,8 +62,14 @@ class Weather_Map_Widget extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 
-		// Start the iframe.
-		echo '<iframe style="box-sizing: border-box;';
+		// Give the iframe a unique title.
+		echo '<iframe title="Ventus Weather Map Widget ' . esc_attr( $lat ) . ' ' . esc_attr( $lon ) . '" ';
+
+		// Set whether the iframe lazy-loads.
+		echo isset( $instance['loading'] ) ? 'loading="' . esc_attr( $loading ) . '" ' : '';
+
+		// Start the styling.
+		echo 'style="box-sizing: border-box;';
 
 		// Set the width.
 		echo ( isset( $instance['width'] ) ) ? ' width: ' . esc_attr( $width ) . '; ' : '100%; ';
@@ -138,12 +145,13 @@ class Weather_Map_Widget extends WP_Widget {
 		$units    = ( isset( $instance['units'] ) ) ? $instance['units'] : 'default';
 		$forecast = ( isset( $instance['forecast'] ) ) ? $instance['forecast'] : '';
 		$time     = ( isset( $instance['time'] ) ) ? $instance['time'] : '';
+		$loading  = ( isset( $instance['loading'] ) ) ? $instance['loading'] : 'lazy';
 		?>
 		<div class="ventus-widget-admin">
 			<div class="row">
 				<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'ventus' ); ?></label>
 				<input class="widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $title ); ?>">
-				<small><?php esc_html_e( 'Appears above the widget', 'ventus' ); ?></small>
+				<small><?php esc_html_e( 'The title above the widget', 'ventus' ); ?></small>	
 			</div>
 			<div class="row">
 				<div class="half">
@@ -157,9 +165,19 @@ class Weather_Map_Widget extends WP_Widget {
 				<small><?php esc_html_e( 'Accepts any valid CSS values for width and height', 'ventus' ); ?></small>
 			</div>
 			<div class="row">
-				<label for="<?php echo esc_attr( $this->get_field_id( 'radius' ) ); ?>"><?php esc_html_e( 'Rounded Corners:', 'ventus' ); ?></label> 
-				<input class="widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'radius' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'radius' ) ); ?>" value="<?php echo esc_attr( $radius ); ?>">
-				<small><?php esc_html_e( 'Accepts any valid CSS values for border-radius', 'ventus' ); ?></small>
+				<div class="half">
+					<label for="<?php echo esc_attr( $this->get_field_id( 'radius' ) ); ?>"><?php esc_html_e( 'Rounded Corners:', 'ventus' ); ?></label> 
+					<input class="widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'radius' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'radius' ) ); ?>" value="<?php echo esc_attr( $radius ); ?>">
+					<small><?php esc_html_e( 'Accepts any valid CSS values for border-radius', 'ventus' ); ?></small>
+				</div>		
+				<div class="half">
+					<label for="<?php echo esc_attr( $this->get_field_id( 'loading' ) ); ?>"><?php esc_html_e( 'Loading Type:', 'ventus' ); ?></label>
+					<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'loading' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'loading' ) ); ?>">
+						<option value="lazy" <?php echo ( 'lazy' === $loading ) ? 'selected' : ''; ?>><?php esc_html_e( 'Lazy', 'ventus' ); ?></option>
+						<option value="eager" <?php echo ( 'eager' === $loading ) ? 'selected' : ''; ?>><?php esc_html_e( 'Eager', 'ventus' ); ?></option>
+					</select>
+					<small><?php esc_html_e( 'Lazy load to improve performance', 'ventus' ); ?></small>
+				</div>
 			</div>
 			<div class="row">
 				<div class="half">
@@ -286,6 +304,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$instance['units']    = ( isset( $new_instance['units'] ) ) ? sanitize_text_field( $new_instance['units'] ) : '';
 		$instance['forecast'] = ( isset( $new_instance['forecast'] ) ) ? sanitize_text_field( $new_instance['forecast'] ) : '';
 		$instance['time']     = ( isset( $new_instance['time'] ) ) ? sanitize_text_field( $new_instance['time'] ) : '';
+		$instance['loading']  = ( isset( $new_instance['loading'] ) ) ? sanitize_text_field( $new_instance['loading'] ) : '';
 
 		return $instance;
 	}
