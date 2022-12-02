@@ -2,7 +2,7 @@
 Contributors: davidmatthew
 Tags: weather map, weather forecast, windy, weather, map, forecast, ventus
 Requires at least: 5.0
-Tested up to: 5.6
+Tested up to: 6.1
 Requires PHP: 7.0
 Stable tag: 1.4.0
 License: GPL-3
