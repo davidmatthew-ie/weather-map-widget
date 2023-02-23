@@ -86,7 +86,8 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 == Changelog ==
 
 = 1.5.0 =
-* Added wind gust.
+* Added gust-wind.
+* Added Italian translation.
 
 = 1.4.0 =
 * Added lazy loading option for better performance.
