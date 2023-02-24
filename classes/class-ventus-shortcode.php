@@ -61,7 +61,7 @@ class Ventus_Shortcode {
 				'forecast' => '',
 				'time'     => 'now',
 				'loading'  => 'lazy',
-				'model'  => 'ecmwf'
+				'model'    => 'ecmwf'
 			),
 			$attributes
 		);
