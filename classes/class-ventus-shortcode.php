@@ -60,7 +60,8 @@ class Ventus_Shortcode {
 				'pressure' => '',
 				'forecast' => '',
 				'time'     => 'now',
-				'loading'  => 'lazy'
+				'loading'  => 'lazy',
+				'model'  => 'ecmwf'
 			),
 			$attributes
 		);
@@ -113,8 +114,11 @@ class Ventus_Shortcode {
 		// The forecast time.
 		$output .= '&calendar=' . esc_attr( $atts['time'] );
 
+		// The model.
+		$output .= '&product=' . esc_attr( $atts['model'] );
+
 		// Complete the iframe.
-		$output .= '&product=ecmwf&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
+		$output .= '&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
 
 		// Return the complete output.
 		return $output;

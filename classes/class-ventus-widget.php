@@ -55,6 +55,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$forecast = ( isset( $instance['forecast'] ) ) ? $instance['forecast'] : '';
 		$time     = ( isset( $instance['time'] ) ) ? $instance['time'] : '';
 		$loading  = ( isset( $instance['loading'] ) ) ? $instance['loading'] : '';
+		$model  = ( isset( $instance['model'] ) ) ? $instance['model'] : '';
 
 		echo $args['before_widget'];
 
@@ -119,9 +120,11 @@ class Weather_Map_Widget extends WP_Widget {
 		// The spot forecast.
 		echo ( isset( $instance['time'] ) ) ? '&calendar=' . esc_attr( $time ) : '&calendar=now';
 
+		// The wether forecast model.
+		echo ( isset( $instance['model'] ) ) ? '&product=' . esc_attr( $model ) : '&product=ecmwf';
+
 		// Complete the iframe.
-		// update this code to be able to choose the model: ecmwf(default) - gfs - iconEu - icon - nems.
-		echo '&product=ecmwf&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
+		echo '&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
 		
 		echo $args['after_widget'];
 	}
@@ -147,6 +150,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$forecast = ( isset( $instance['forecast'] ) ) ? $instance['forecast'] : '';
 		$time     = ( isset( $instance['time'] ) ) ? $instance['time'] : '';
 		$loading  = ( isset( $instance['loading'] ) ) ? $instance['loading'] : 'lazy';
+		$model  = ( isset( $instance['model'] ) ) ? $instance['model'] : 'ecmwf';
 		?>
 		<div class="ventus-widget-admin">
 			<div class="row">
@@ -277,6 +281,17 @@ class Weather_Map_Widget extends WP_Widget {
 				</select>
 				<small><?php esc_html_e( 'Choose your preferred wind measurement units', 'ventus' ); ?></small>
 			</div>
+			<div class="row">
+				<label for="<?php echo esc_attr( $this->get_field_id( 'model' ) ); ?>"><?php esc_html_e( 'Wether Forecast Model:', 'ventus' ); ?></label>
+				<select class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'model' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'model' ) ); ?>">
+					<option value="ecmwf" <?php echo ( 'ecmwf' === $model ) ? 'selected' : ''; ?>><?php esc_html_e( 'ECMWF', 'ventus' ); ?></option>
+					<option value="gfs" <?php echo ( 'gfs' === $model ) ? 'selected' : ''; ?>><?php esc_html_e( 'GFS', 'ventus' ); ?></option>
+					<option value="iconEu" <?php echo ( 'iconEu' === $model ) ? 'selected' : ''; ?>><?php esc_html_e( 'ICON_EU', 'ventus' ); ?></option>
+					<option value="icon" <?php echo ( 'icon' === $model ) ? 'selected' : ''; ?>><?php esc_html_e( 'ICON', 'ventus' ); ?></option>
+					<option value="nems" <?php echo ( 'nems' === $model ) ? 'selected' : ''; ?>><?php esc_html_e( 'NEMS', 'ventus' ); ?></option>
+				</select>
+				<small><?php esc_html_e( 'Choose your preferred wether forecast model', 'ventus' ); ?></small>
+			</div>
 		</div>
 		<?php
 	}
@@ -307,6 +322,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$instance['forecast'] = ( isset( $new_instance['forecast'] ) ) ? sanitize_text_field( $new_instance['forecast'] ) : '';
 		$instance['time']     = ( isset( $new_instance['time'] ) ) ? sanitize_text_field( $new_instance['time'] ) : '';
 		$instance['loading']  = ( isset( $new_instance['loading'] ) ) ? sanitize_text_field( $new_instance['loading'] ) : '';
+		$instance['model']  = ( isset( $new_instance['model'] ) ) ? sanitize_text_field( $new_instance['model'] ) : '';
 
 		return $instance;
 	}

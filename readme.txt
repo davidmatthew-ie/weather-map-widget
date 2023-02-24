@@ -88,6 +88,7 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 = 1.5.0 =
 * Added gust-wind.
 * Added Italian translation.
+* Added ability to choose Weather Forecast Model (ecmwf - gfs - iconEu - icon - nems)
 
 = 1.4.0 =
 * Added lazy loading option for better performance.
