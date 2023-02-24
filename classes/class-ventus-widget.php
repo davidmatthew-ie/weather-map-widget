@@ -85,10 +85,10 @@ class Weather_Map_Widget extends WP_Widget {
 		echo 'src="https://embed.windy.com/embed2.html?';
 
 		// Set the latitude.
-		echo ( isset( $instance['lat'] ) ) ? 'lat=' . esc_attr( $lat ) : 'lat=38.691';
+		echo ( isset( $instance['lat'] ) ) ? 'lat=' . esc_attr( $lat ) : 'lat=53.199';
 
 		// Set the longitude.
-		echo ( isset( $instance['lon'] ) ) ? '&lon=' . esc_attr( $lon ) : '&lon=16.564';
+		echo ( isset( $instance['lon'] ) ) ? '&lon=' . esc_attr( $lon ) : '&lon=-7.603';
 
 		// Zoom level.
 		echo ( isset( $instance['zoom'] ) ) ? '&zoom=' . esc_attr( $zoom ) : '&zoom=5';
@@ -103,10 +103,10 @@ class Weather_Map_Widget extends WP_Widget {
 		echo ( isset( $instance['pressure'] ) ) ? '&pressure=' . esc_attr( $pressure ) : '';
 
 		// Detail latitude.
-		echo ( isset( $instance['lat'] ) ) ? '&detailLat=' . esc_attr( $lat ) : '&detailLat=38.691';
+		echo ( isset( $instance['lat'] ) ) ? '&detailLat=' . esc_attr( $lat ) : '&detailLat=53.199';
 
 		// Detail longitude.
-		echo ( isset( $instance['lon'] ) ) ? '&detailLon=' . esc_attr( $lon ) : '&detailLon=16.564';
+		echo ( isset( $instance['lon'] ) ) ? '&detailLon=' . esc_attr( $lon ) : '&detailLon=-7.603';
 
 		// The wind measurement units.
 		echo ( isset( $instance['units'] ) ) ? '&metricWind=' . esc_attr( $units ) : '&metricWind=default';
@@ -139,8 +139,8 @@ class Weather_Map_Widget extends WP_Widget {
 		$width    = ( isset( $instance['width'] ) ) ? $instance['width'] : '100%';
 		$height   = ( isset( $instance['height'] ) ) ? $instance['height'] : '350px';
 		$radius   = ( isset( $instance['radius'] ) ) ? $instance['radius'] : '0';
-		$lat      = ( isset( $instance['lat'] ) ) ? $instance['lat'] : '38.691';
-		$lon      = ( isset( $instance['lon'] ) ) ? $instance['lon'] : '16.564';
+		$lat      = ( isset( $instance['lat'] ) ) ? $instance['lat'] : '53.199';
+		$lon      = ( isset( $instance['lon'] ) ) ? $instance['lon'] : '-7.603';
 		$zoom     = ( isset( $instance['zoom'] ) ) ? $instance['zoom'] : '5';
 		$layer    = ( isset( $instance['layer'] ) ) ? $instance['layer'] : 'wind';
 		$marker   = ( isset( $instance['marker'] ) ) ? $instance['marker'] : '';
@@ -193,7 +193,7 @@ class Weather_Map_Widget extends WP_Widget {
 					<label for="<?php echo esc_attr( $this->get_field_id( 'lon' ) ); ?>"><?php esc_html_e( 'Longitude:', 'ventus' ); ?></label> 
 					<input class="widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'lon' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'lon' ) ); ?>" value="<?php echo esc_attr( $lon ); ?>">
 				</div>
-				<small><?php esc_html_e( 'Tip: get these from windy.com', 'ventus' ); ?>, e.g. <a href="https://windy.com" target="_blank">windy.com/?38.691,16.564</a></small>
+				<small><?php esc_html_e( 'Tip: get these from windy.com', 'ventus' ); ?>, e.g. <a href="https://windy.com" target="_blank">windy.com/?53.199,-7.603</a></small>
 			</div>
 			<div class="row">
 				<label for="<?php echo esc_attr( $this->get_field_id( 'layer' ) ); ?>"><?php esc_html_e( 'Layer Type:', 'ventus' ); ?></label>

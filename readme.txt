@@ -29,7 +29,7 @@ The shortcode accepts up to 13 attributes. You can simply use `[ventus]` and it 
 
 An example of a fully filled-out shortcode would be:
 
-`[ventus width="100%" height="350px" radius="20px" loading="lazy" lat="38.691" lon="16.564" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true" forecast="true" time="12"]`. 
+`[ventus width="100%" height="350px" radius="20px" loading="lazy" lat="53.199" lon="-7.603" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true" forecast="true" time="12"]`. 
 
 The attributes can be set as follows:
 
@@ -37,7 +37,7 @@ The attributes can be set as follows:
 * The `height` attribute accepts any valid CSS property for height.
 * The `radius` attribute accepts any valid CSS property for border-radius.
 * The `loading` attribute accepts either lazy or eager. The default is lazy loading.
-* The `lat` attribute must contain a string of digits to three decimal places, in the range of -90 to +90 (e.g. "38.691"). 
+* The `lat` attribute must contain a string of digits to three decimal places, in the range of -90 to +90 (e.g. "53.199"). 
 * The `lon` attribute must also contain a string of digits to three decimal places, in the range of -180 to +180 (e.g. "-120.894"). 
 * The `zoom` attribute must contain a number between 3 and 11 (inclusive).
 * The `layer` attribute accepts the following values: clouds, cosc (CO concentration), radar, rain, snowcover, sst (sea temperature), temp (standard temperature), waves and wind.
@@ -65,7 +65,7 @@ Incorrect: `lat=”44.096”`
 
 = How do I set the latitude and longitude?
 
-The easiest (and recommended) way to do this is to go straight to [windy.com](https://www.windy.com). Once there, take note of the URL. It will contain the latitude and longitude in its parameters, and if you zoom in, it will also contain the zoom level. For example, the sample parameters I use as defaults are: latitude 38.691, longitude 16.564, and a zoom level of 5. These would show in the URL in the following format: [windy.com/?38.691,16.564,5](https://www.windy.com).
+The easiest (and recommended) way to do this is to go straight to [windy.com](https://www.windy.com). Once there, take note of the URL. It will contain the latitude and longitude in its parameters, and if you zoom in, it will also contain the zoom level. For example, the sample parameters I use as defaults are: latitude 53.199, longitude -7.603, and a zoom level of 5. These would show in the URL in the following format: [windy.com/?53.199,-7.603,5](https://www.windy.com).
 
 = Why not just embed the iframe directly from [windy.com](https://www.windy.com) instead of using this plugin? =
 
