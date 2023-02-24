@@ -1,10 +1,10 @@
 === Ventus - Weather Map Widget & Shortcode ===
-Contributors: davidmatthew
+Contributors: davidmatthew and marcosimonetti
 Tags: weather map, weather forecast, windy, weather, map, forecast, ventus
 Requires at least: 5.0
 Tested up to: 6.1
 Requires PHP: 7.0
-Stable tag: 1.4.0
+Stable tag: 1.5.0
 License: GPL-3
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -84,6 +84,11 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 5. The widget view from the admin area (Appearance > Widgets).
 
 == Changelog ==
+
+= 1.5.0 =
+* Added gust-wind.
+* Added Italian translation.
+* Added ability to choose Weather Forecast Model (ecmwf - gfs - iconEu - icon - nems)
 
 = 1.4.0 =
 * Added lazy loading option for better performance.
