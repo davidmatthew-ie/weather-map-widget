@@ -55,7 +55,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$forecast = ( isset( $instance['forecast'] ) ) ? $instance['forecast'] : '';
 		$time     = ( isset( $instance['time'] ) ) ? $instance['time'] : '';
 		$loading  = ( isset( $instance['loading'] ) ) ? $instance['loading'] : '';
-		$model  = ( isset( $instance['model'] ) ) ? $instance['model'] : '';
+		$model    = ( isset( $instance['model'] ) ) ? $instance['model'] : '';
 
 		echo $args['before_widget'];
 
@@ -150,7 +150,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$forecast = ( isset( $instance['forecast'] ) ) ? $instance['forecast'] : '';
 		$time     = ( isset( $instance['time'] ) ) ? $instance['time'] : '';
 		$loading  = ( isset( $instance['loading'] ) ) ? $instance['loading'] : 'lazy';
-		$model  = ( isset( $instance['model'] ) ) ? $instance['model'] : 'ecmwf';
+		$model    = ( isset( $instance['model'] ) ) ? $instance['model'] : 'ecmwf';
 		?>
 		<div class="ventus-widget-admin">
 			<div class="row">
@@ -322,7 +322,7 @@ class Weather_Map_Widget extends WP_Widget {
 		$instance['forecast'] = ( isset( $new_instance['forecast'] ) ) ? sanitize_text_field( $new_instance['forecast'] ) : '';
 		$instance['time']     = ( isset( $new_instance['time'] ) ) ? sanitize_text_field( $new_instance['time'] ) : '';
 		$instance['loading']  = ( isset( $new_instance['loading'] ) ) ? sanitize_text_field( $new_instance['loading'] ) : '';
-		$instance['model']  = ( isset( $new_instance['model'] ) ) ? sanitize_text_field( $new_instance['model'] ) : '';
+		$instance['model']    = ( isset( $new_instance['model'] ) ) ? sanitize_text_field( $new_instance['model'] ) : '';
 
 		return $instance;
 	}

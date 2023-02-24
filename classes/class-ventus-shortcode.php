@@ -114,7 +114,7 @@ class Ventus_Shortcode {
 		// The forecast time.
 		$output .= '&calendar=' . esc_attr( $atts['time'] );
 
-		// The model.
+		// The wether forecast model.
 		$output .= '&product=' . esc_attr( $atts['model'] );
 
 		// Complete the iframe.
