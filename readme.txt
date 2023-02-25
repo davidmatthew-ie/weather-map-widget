@@ -94,6 +94,8 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 * Adjustments to widget layout.
 * Added Italian translation.
 
+Shout out to Marco Simonetti for the assist!
+
 = 1.4.0 =
 * Added lazy loading option for better performance.
 * Improved accessibility with unique title attribute.
