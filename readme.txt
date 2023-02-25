@@ -16,13 +16,16 @@ Ventus allows you to easily embed the [windy.com](https://www.windy.com) widget 
 It is a lightweight plugin built using an object-oriented approach, and follows [Wordpress Coding Standards](https://github.com/WordPress/WordPress-Coding-Standards).
 
 = Features =
-* Set the overlay to either clouds, CO concentration, radar/lightning, rain, sea temperature, snow cover, standard temperature, waves, or wind.
+* Set the overlay to either clouds, CO concentration, currents, radar/lightning, rain, sea temperature, snow cover, standard temperature, waves, wind or wind gusts.
 * Use either Celsius or Fahrenheit as the temperature scale.
 * Set the width, height and border-radius using responsive (%) and/or fixed (px) values.
 * Manually define longitude and latitude for precise location coordinates.
+* Select the altitude from surface up to 13.5km (effective only when layer is set to wind or temperature).
 * Choose from 8 levels of zoom (min. 3, max. 11).
 * Show or hide pressure isolines, the map marker and spot forecast.
 * Choose from the following wind measurement units: beaufort (bft), kilometers per hour (km/h), knots (kt), meters per second (m/s) and miles per hour (mph).
+* Choose from the following forecast models: ECMWF, ICON, ICON-EU, GFS and NEMS.
+* Set the forecast time from now to 12 or 24 hours ahead.
 
 = Shortcodes =
 The shortcode accepts up to 16 attributes. You can simply use `[ventus]` and it will work (or the old shortcode `[weather-map]` which will continue to work), but you will most likely want to customise the remaining attributes yourself.
