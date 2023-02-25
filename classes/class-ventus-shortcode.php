@@ -54,7 +54,7 @@ class Ventus_Shortcode {
 				'lon'      => '-7.603',
 				'zoom'     => '5',
 				'layer'    => 'wind',
-				'level'    => 'surface'
+				'level'    => 'surface',
 				'scale'    => 'C',
 				'units'    => 'default',
 				'marker'   => '',
