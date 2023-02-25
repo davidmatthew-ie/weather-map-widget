@@ -54,6 +54,7 @@ class Ventus_Shortcode {
 				'lon'      => '-7.603',
 				'zoom'     => '5',
 				'layer'    => 'wind',
+				'level'    => 'surface'
 				'scale'    => 'C',
 				'units'    => 'default',
 				'marker'   => '',
@@ -114,11 +115,14 @@ class Ventus_Shortcode {
 		// The forecast time.
 		$output .= '&calendar=' . esc_attr( $atts['time'] );
 
-		// The wether forecast model.
+		// The weather forecast model.
 		$output .= '&product=' . esc_attr( $atts['model'] );
 
+		// The level (altitude).
+		$output .= '&level=' . esc_attr( $atts['level'] );
+
 		// Complete the iframe.
-		$output .= '&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
+		$output .= '&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe>';
 
 		// Return the complete output.
 		return $output;
