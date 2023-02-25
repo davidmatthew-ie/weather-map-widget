@@ -1,5 +1,5 @@
 === Ventus - Weather Map Widget & Shortcode ===
-Contributors: davidmatthew and marcosimonetti
+Contributors: davidmatthew, marcosimonetti
 Tags: weather map, weather forecast, windy, weather, map, forecast, ventus
 Requires at least: 5.0
 Tested up to: 6.1
@@ -25,11 +25,11 @@ It is a lightweight plugin built using an object-oriented approach, and follows 
 * Choose from the following wind measurement units: beaufort (bft), kilometers per hour (km/h), knots (kt), meters per second (m/s) and miles per hour (mph).
 
 = Shortcodes =
-The shortcode accepts up to 13 attributes. You can simply use `[ventus]` and it will work (or the old shortcode `[weather-map]` which will continue to work), but you will most likely want to customise the remaining attributes yourself.
+The shortcode accepts up to 16 attributes. You can simply use `[ventus]` and it will work (or the old shortcode `[weather-map]` which will continue to work), but you will most likely want to customise the remaining attributes yourself.
 
 An example of a fully filled-out shortcode would be:
 
-`[ventus width="100%" height="350px" radius="20px" loading="lazy" lat="53.199" lon="-7.603" zoom="4" layer="wind" scale="C" units="knots" pressure="true"  marker="true" forecast="true" time="12"]`. 
+`[ventus width="100%" height="350px" radius="20px" loading="lazy" lat="53.199" lon="-7.603" zoom="4" layer="wind" level="surface" scale="C" units="knots" pressure="true" marker="true" model="ecmwf" forecast="true" time="12"]`
 
 The attributes can be set as follows:
 
@@ -40,13 +40,15 @@ The attributes can be set as follows:
 * The `lat` attribute must contain a string of digits to three decimal places, in the range of -90 to +90 (e.g. "53.199"). 
 * The `lon` attribute must also contain a string of digits to three decimal places, in the range of -180 to +180 (e.g. "-120.894"). 
 * The `zoom` attribute must contain a number between 3 and 11 (inclusive).
-* The `layer` attribute accepts the following values: clouds, cosc (CO concentration), radar, rain, snowcover, sst (sea temperature), temp (standard temperature), waves and wind.
+* The `layer` attribute accepts the following values: clouds, cosc (CO concentration), currents, gust, radar, rain, snowcover, sst (sea temperature), temp (standard temperature), waves and wind.
+* The `level` attribute accepts the following values: surface, 100m, 950h (600m), 925h (750m), 900h (900m), 850h (1500m), 800h (2000m), 700h (3000m), 600h (4200m), 500h (5500m), 400h (7000m), 300h (9000m), 250h (10000m), 200h (11700m) and 150h (13500m).
 * The `scale` attribute accepts either "C" or "F", defining Celsius and Fahrenheit respectively.
 * The `units` attribute accepts the following values: bft (beaufort), km/h (kilometers per hour), kt (knots), m/s (meters per second) and mph (miles per hour).
 * The `pressure` attribute can be set to true to display pressure isolines, otherwise the isolines will remain hidden.
 * The `marker` attribute can also be set to true, otherwise it will remain hidden.
 * The `forecast` attribute can be set to true to display the spot forecast, otherwise it will remain hidden.
 * The `time` attribute accepts the following values: now (the default), 12 (12 hours from now) and 24 (24 hours from now).
+* The `model` attribute accepts the following values: ecmwf, icon, iconEu, gfs and nems.
 
 Note that in the case of an invalid value, a default value will be used instead.
 
@@ -86,9 +88,11 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 == Changelog ==
 
 = 1.5.0 =
-* Added gust-wind.
+* Added feature to select different altitude levels (from the surface up to 13.5km).
+* Added feature to choose between different forecast models (ecmwf, gfs, iconEu, icon, nems).
+* New layer/overlay types: currents and wind gusts.
+* Adjustments to widget layout.
 * Added Italian translation.
-* Added ability to choose Weather Forecast Model (ecmwf - gfs - iconEu - icon - nems)
 
 = 1.4.0 =
 * Added lazy loading option for better performance.
