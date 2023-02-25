@@ -41,7 +41,7 @@ The attributes can be set as follows:
 * The `lon` attribute must also contain a string of digits to three decimal places, in the range of -180 to +180 (e.g. "-120.894"). 
 * The `zoom` attribute must contain a number between 3 and 11 (inclusive).
 * The `layer` attribute accepts the following values: clouds, cosc (CO concentration), currents, gust, radar, rain, snowcover, sst (sea temperature), temp (standard temperature), waves and wind.
-* The `level` attribute accepts the following values: surface, 100m, 950h (600m), 925h (750m), 900h (900m), 850h (1500m), 800h (2000m), 700h (3000m), 600h (4200m), 500h (5500m), 400h (7000m), 300h (9000m), 250h (10000m), 200h (11700m) and 150h (13500m).
+* The `level` attribute (only effective when the layer is wind or temp) accepts the following values: surface, 100m, 950h (600m), 925h (750m), 900h (900m), 850h (1500m), 800h (2000m), 700h (3000m), 600h (4200m), 500h (5500m), 400h (7000m), 300h (9000m), 250h (10000m), 200h (11700m) and 150h (13500m).
 * The `scale` attribute accepts either "C" or "F", defining Celsius and Fahrenheit respectively.
 * The `units` attribute accepts the following values: bft (beaufort), km/h (kilometers per hour), kt (knots), m/s (meters per second) and mph (miles per hour).
 * The `pressure` attribute can be set to true to display pressure isolines, otherwise the isolines will remain hidden.
