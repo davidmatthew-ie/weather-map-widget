@@ -1,6 +1,6 @@
 === Ventus - Weather Map Widget & Shortcode ===
 Contributors: davidmatthew, marcosimonetti
-Tags: weather map, weather forecast, windy, weather, map, forecast, ventus
+Tags: weather, map, forecast, windy, ventus
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.0
