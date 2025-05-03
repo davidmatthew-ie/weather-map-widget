@@ -2,7 +2,7 @@
 Contributors: davidmatthew, marcosimonetti
 Tags: weather map, weather forecast, windy, weather, map, forecast, ventus
 Requires at least: 5.0
-Tested up to: 6.1
+Tested up to: 6.8
 Requires PHP: 7.0
 Stable tag: 1.5.0
 License: GPL-3
@@ -95,9 +95,7 @@ If you'd prefer to do this, that's great - no problem! However, this plugin was 
 * Added feature to choose between different forecast models (ecmwf, gfs, iconEu, icon, nems).
 * New layer/overlay types: currents and wind gusts.
 * Adjustments to widget layout.
-* Added Italian translation.
-
-Shout out to Marco Simonetti for the assist!
+* Added Italian translation (shout out to Marco Simonetti for the assist!).
 
 = 1.4.0 =
 * Added lazy loading option for better performance.
